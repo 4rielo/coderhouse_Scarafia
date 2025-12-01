@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after { box-sizing: border-box; }
+
+header {
+    background-color: #00d4ff;
+    text-align: center;
+    font-size: xx-large;
+    padding: 20px;
+}
+
+.no-underline {
+    text-decoration: none;    
+    color: black;
+}
+
+body {
+    height: 100%;
+}
+
+h2 {
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#div_line {
+    background-color: black;
+    height: 3px;
+    margin-inline: 20px;
+}
+
+#banner {
+    max-width: 100%;
+    height: auto;
+}
+
+.video_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+}
+
+.video_description {
+    padding: 20px;
+}
+
+.blog_entry {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.blog_image {
+    margin: 40px;
+    max-width: 40%;
+}
+
+.dogs_table {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
+
+.dog_cell {
+    border-color: black;
+    border-style: groove;
+}
+
+.dog_image {
+    max-width: 60%;
+}
+
+h3 {
+    font-size: larger;
+}
+
+.find_my_dog_form {
+    margin: auto;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;;
+}
+
+.find_my_dog_form_cell {
+    padding: 20px;
+    
+}
+
+#submit_find_my_dog {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact_form {
+    margin: 20px;
+}
+
+.contact_us_form_field {
+    display: flex;
+    width: 200px;
+    justify-content: end;
+}
+
+.contact_us_form_submit { 
+    display: flex;
+    justify-content: end;
+}
+
+#submit_form {
+    padding: 10px;
+    background-color: #009ff3;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00d4ff;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.footer_left {
+    padding-inline-end: 20px;
+}
+
+#contact_us {
+    justify-content: inline-end;
+}

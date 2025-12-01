@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Guau refugio de perritos - Buscador de perros</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="no-underline">
+            <h1>Guau refugio de perritos</h1>
+        </a>
+    </header>
+
+    <section>
+        <h2>Encontrar mi perro ideal</h2>
+        <div id="div_line"></div>
+    </section>
+
+    
+    <section>
+        <form action="./" method="post" class="find_my_dog_form">
+            <table>
+                <tr class="find_my_dog_form_row">
+                    <td class="find_my_dog_form_cell">
+                        <label for="dog_size">Que tamaño de perro deseas?</label>
+                        <br>
+                        <input type="checkbox" name="dog_size" id="dog_size_large">
+                        <label for="dog_size_large">Grande</label>
+                        <br>
+                        <input type="checkbox" name="dog_size" id="dog_size_medium">
+                        <label for="dog_size_medium">Mediano</label>
+                        <br>
+                        <input type="checkbox" name="dog_size" id="dog_size_small">
+                        <label for="dog_size_small">Chico</label>
+                    </td>
+
+                    <td class="find_my_dog_form_cell">
+                        <label for="dog_age">Que edad de perrito preferís?</label>
+                        <br>
+                        <input type="checkbox" name="dog_age" id="dog_age_puppy">
+                        <label for="dog_age_puppy">Cachorro</label>
+                        <br>
+                        <input type="checkbox" name="dog_age" id="dog_age_young">
+                        <label for="dog_age_young">Joven</label>
+                        <br>
+                        <input type="checkbox" name="dog_age" id="dog_age_old">
+                        <label for="dog_age_old">Viejito</label>
+                    </td>
+
+                    <td class="find_my_dog_form_cell">
+                        <label for="dog_gender">Buscas algún sexo en particular?</label>
+                        <br>
+                        <input type="radio" name="dog_gender" id="dog_gender_male">
+                        <label for="dog_gender_male">Machito</label>
+                        <br>
+                        <input type="radio" name="dog_gender" id="dog_gender_female">
+                        <label for="dog_gender_female">Hembrita</label>
+                        <br>
+                        <input type="radio" name="dog_gender" id="dog_gender_any">
+                        <label for="dog_gender_any">Cualquiera</label>
+                    </td>
+                </tr>
+                <tr class="find_my_dog_form_row">                    
+                    <td class="find_my_dog_form_cell">
+                        <label for="dog_color">Tenes algún color preferido?</label>
+                        <br>
+                        <input type="checkbox" name="dog_color" id="dog_color_black">
+                        <label for="dog_color_black">Negrito</label>
+                        <br>
+                        <input type="checkbox" name="dog_color" id="dog_color_white">
+                        <label for="dog_color_white">Blanquito</label>
+                        <br>
+                        <input type="checkbox" name="dog_color" id="dog_color_brown">
+                        <label for="dog_color_brown">Marroncito</label>
+                        <br>
+                        <input type="checkbox" name="dog_color" id="dog_color_spotted">
+                        <label for="dog_color_spotted">Alguno con mancha</label>
+                        
+                    </td>
+
+                    <td class="find_my_dog_form_cell">
+                        <label for="dog_hair">Que tipo de pelaje buscas?</label>
+                        <br>
+                        <input type="checkbox" name="dog_hair" id="dog_hair_short">
+                        <label for="dog_hair_short">Pelo corto</label>
+                        <br>
+                        <input type="checkbox" name="dog_hair" id="dog_hair_long">
+                        <label for="dog_hair_long">Pelo largo</label>
+                        <br>
+                        <input type="checkbox" name="dog_hair" id="dog_hair_medium">
+                        <label for="dog_hair_medium">Intermedio</label>
+                    </td>
+
+                    <td class="find_my_dog_form_cell">
+                        <label for="shelter">Que refugio es el más cercano a tu casa?</label>
+                        <br>
+                        <select name="shelter_dropdown" id="shelter">
+                            <option value="cordoba">Cordoba</option>
+                            <option value="once">Once</option>
+                            <option value="parana">Paraná</option>
+                            <option value="rosario">Rosario</option>
+                            <option value="san_isidro">San Isidro</option>
+                            <option value="santa_fe">Santa Fé</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr >
+                    <td></td>
+                    <td id="submit_find_my_dog">
+                        <input type="submit" value="Buscar mi perrito" id="submit_form">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>            
+        </form>
+    </section>
+
+    <footer>
+        <div>
+            <a href="find_my_dog.html" class="footer_left">Encontrar mi perro</a>
+            <a href="blog.html" class="footer_left">Blog</a>
+            <a href="our_dogs.html" class="footer_left">Mira nuestros perritos</a>
+        </div>
+    
+        <a href="contact_us.html", id="contact_us">Contactanos</a>
+    </footer>
+</body>
+
+</html>
