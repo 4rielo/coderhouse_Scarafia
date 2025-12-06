@@ -273,7 +273,7 @@ h3 {
     justify-self: end;
 }
 
-#submit_form {
+.submit_form {
     padding: 10px;
     background-color: #009ff3;
     color: white;
