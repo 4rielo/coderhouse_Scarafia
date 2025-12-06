@@ -102,10 +102,14 @@ h2 {
     align-items: center;
     width: 100%;
     justify-content: center;
+    padding: 40px;
+}
+
+.blog_entry_description {
+    padding: 10px;
 }
 
 .blog_image {
-    margin: 40px;
     max-width: 40%;
 }
 
