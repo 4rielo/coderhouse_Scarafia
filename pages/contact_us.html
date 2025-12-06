@@ -10,55 +10,39 @@
 
 <body>
     <header>
-        <a href="../index.html" class="no-underline">
-            <h1>Guau refugio de perritos</h1>
-        </a>
+        <div class="nav">
+            <a href="../index.html" class="no_underline nav_main">
+                <h1>Guau refugio de perritos</h1>
+            </a>
+
+            <div class="nav_menu">
+                <a href="find_my_dog.html" class="nav_item">Encontrar mi perro</a>
+                <a href="blog.html" class="nav_item">Blog</a>
+                <a href="our_dogs.html" class="nav_item">Mira nuestros perritos</a>
+                <a href="contact_us.html", class="nav_item">Contactanos</a>
+            </div>
+        </div>
     </header>
 
-    <section>
-        <h2>Contactanos</h2>
-        <div id="div_line"></div>
-    </section>
-
-    <section class="contact_form">
-        <form action="">
-            <table>
-                <tr>
-                    <td>
-                        <label for="email">Tu correo electrónico:</label>
-                    </td>
-                    <td class="contact_us_form_field">
-                        <input type="email" name="email" id="email">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="tell_us">Qué nos querés comentar?</label>
-                    </td>
-                    <td class="contact_us_form_field">
-                        <textarea name="tell_us" id=""></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td  class="contact_us_form_submit">
-                        <input type="submit" value="Enviar" id="submit_form">
-                    </td>
-                </tr>
-            </table>            
-        </form>
-    </section>
-
-
-    <footer>
-        <div>
-            <a href="find_my_dog.html" class="footer_left">Encontrar mi perro</a>
-            <a href="blog.html" class="footer_left">Blog</a>
-            <a href="our_dogs.html" class="footer_left">Mira nuestros perritos</a>
-        </div>
+    <main>
+        <section>
+            <h2>Contactanos</h2>
+            <div id="div_line"></div>
+        </section>
     
-        <a href="contact_us.html", id="contact_us">Contactanos</a>
-    </footer>
+        <section>
+            <form action="" class="contact_form">
+                <label for="email" class="contact_us_email_label">Tu correo electrónico:</label>
+                <input type="email" name="email" id="email" class="contact_us_email_field">
+                
+                <label for="tell_us" class="contact_us_tell_us_label">Qué nos querés comentar?</label>
+                <textarea name="tell_us" id="tell_us" class="contact_us_tell_us_field"></textarea>
+        
+                <input type="submit" value="Enviar" id="submit_form" class="contact_us_submit_btn">
+            </form>
+        </section>
+    </main>
+
 </body>
 
 </html>

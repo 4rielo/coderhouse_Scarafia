@@ -222,19 +222,55 @@ h3 {
     }
 }
 
+/* Contact Us form */ 
 .contact_form {
     margin: 20px;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-areas: 
+    "contact_us_email_label contact_us_email_field"
+    "contact_us_tell_us_label contact_us_tell_us_field"
+    "contact_us_submit_btn contact_us_submit_btn";
+    row-gap: 50px;
+    column-gap: 10px;
+    align-items: top;
 }
 
-.contact_us_form_field {
-    display: flex;
-    width: 200px;
-    justify-content: end;
+@media (min-width: 768px) {
+    .contact_form {
+        grid-template-columns: repeat(4, 25%);
+        grid-template-areas: 
+        "contact_us_email_label contact_us_email_field . ."
+        "contact_us_tell_us_label contact_us_tell_us_field . ."
+        "contact_us_submit_btn contact_us_submit_btn . .";
+    }
 }
 
-.contact_us_form_submit { 
-    display: flex;
-    justify-content: end;
+.contact_us_email_label {
+    grid-area: contact_us_email_label;
+}
+
+.contact_us_email_field {
+    grid-area: contact_us_email_field;
+    min-height: 2rem;
+    padding-inline: 1rem;
+    max-lines: 1;
+}
+
+.contact_us_tell_us_label {
+    grid-area: contact_us_tell_us_label;
+}
+
+.contact_us_tell_us_field {
+    grid-area: contact_us_tell_us_field;
+    min-height: 10rem;
+    padding: 1rem;
+}
+
+.contact_us_submit_btn { 
+    grid-area: contact_us_submit_btn;    
+    width: 100px;
+    justify-self: end;
 }
 
 #submit_form {
