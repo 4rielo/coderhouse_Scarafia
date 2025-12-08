@@ -10,125 +10,162 @@
 
 <body>
     <header>
-        <a href="../index.html" class="no-underline">
-            <h1>Guau refugio de perritos</h1>
-        </a>
+        <div class="nav">
+            <a href="../index.html" class="no_underline nav_main">
+                <h1>Guau refugio de perritos</h1>
+            </a>
+
+            <div class="nav_menu">
+                <a href="find_my_dog.html" class="nav_item">Encontrar mi perro</a>
+                <a href="blog.html" class="nav_item">Blog</a>
+                <a href="our_dogs.html" class="nav_item">Mira nuestros perritos</a>
+                <a href="contact_us.html", class="nav_item">Contactanos</a>
+            </div>
+        </div>
     </header>
 
-    <section>
-        <h2>Encontrar mi perro ideal</h2>
-        <div id="div_line"></div>
-    </section>
-
+    <main>
+        <section>
+            <h2>Encontrar mi perro ideal</h2>
+            <div id="div_line"></div>
+        </section>
     
-    <section>
-        <form action="./" method="post" class="find_my_dog_form">
-            <table>
-                <tr class="find_my_dog_form_row">
-                    <td class="find_my_dog_form_cell">
-                        <label for="dog_size">Que tamaño de perro deseas?</label>
-                        <br>
-                        <input type="checkbox" name="dog_size" id="dog_size_large">
-                        <label for="dog_size_large">Grande</label>
-                        <br>
-                        <input type="checkbox" name="dog_size" id="dog_size_medium">
-                        <label for="dog_size_medium">Mediano</label>
-                        <br>
-                        <input type="checkbox" name="dog_size" id="dog_size_small">
-                        <label for="dog_size_small">Chico</label>
-                    </td>
+        <section>
+            <form action="./" method="post" class="find_my_dog_form">
+                <div class="find_my_dog_form_size">
+                    <h4>Que tamaño de perro deseas?</h4>
 
-                    <td class="find_my_dog_form_cell">
-                        <label for="dog_age">Que edad de perrito preferís?</label>
-                        <br>
-                        <input type="checkbox" name="dog_age" id="dog_age_puppy">
-                        <label for="dog_age_puppy">Cachorro</label>
-                        <br>
-                        <input type="checkbox" name="dog_age" id="dog_age_young">
-                        <label for="dog_age_young">Joven</label>
-                        <br>
-                        <input type="checkbox" name="dog_age" id="dog_age_old">
-                        <label for="dog_age_old">Viejito</label>
-                    </td>
+                    <br>
 
-                    <td class="find_my_dog_form_cell">
-                        <label for="dog_gender">Buscas algún sexo en particular?</label>
-                        <br>
-                        <input type="radio" name="dog_gender" id="dog_gender_male">
-                        <label for="dog_gender_male">Machito</label>
-                        <br>
-                        <input type="radio" name="dog_gender" id="dog_gender_female">
-                        <label for="dog_gender_female">Hembrita</label>
-                        <br>
-                        <input type="radio" name="dog_gender" id="dog_gender_any">
-                        <label for="dog_gender_any">Cualquiera</label>
-                    </td>
-                </tr>
-                <tr class="find_my_dog_form_row">                    
-                    <td class="find_my_dog_form_cell">
-                        <label for="dog_color">Tenes algún color preferido?</label>
-                        <br>
-                        <input type="checkbox" name="dog_color" id="dog_color_black">
-                        <label for="dog_color_black">Negrito</label>
-                        <br>
-                        <input type="checkbox" name="dog_color" id="dog_color_white">
-                        <label for="dog_color_white">Blanquito</label>
-                        <br>
-                        <input type="checkbox" name="dog_color" id="dog_color_brown">
-                        <label for="dog_color_brown">Marroncito</label>
-                        <br>
-                        <input type="checkbox" name="dog_color" id="dog_color_spotted">
-                        <label for="dog_color_spotted">Alguno con mancha</label>
-                        
-                    </td>
+                    <label>
+                        <input type="checkbox" name="dog_size" id="dog_size_large" value="dog_size_large">
+                        Grande
+                    </label>
 
-                    <td class="find_my_dog_form_cell">
-                        <label for="dog_hair">Que tipo de pelaje buscas?</label>
-                        <br>
-                        <input type="checkbox" name="dog_hair" id="dog_hair_short">
-                        <label for="dog_hair_short">Pelo corto</label>
-                        <br>
-                        <input type="checkbox" name="dog_hair" id="dog_hair_long">
-                        <label for="dog_hair_long">Pelo largo</label>
-                        <br>
-                        <input type="checkbox" name="dog_hair" id="dog_hair_medium">
-                        <label for="dog_hair_medium">Intermedio</label>
-                    </td>
+                    <label>
+                        <input type="checkbox" name="dog_size" id="dog_size_medium" value="dog_size_medium">
+                        Mediano
+                    </label>
 
-                    <td class="find_my_dog_form_cell">
-                        <label for="shelter">Que refugio es el más cercano a tu casa?</label>
-                        <br>
-                        <select name="shelter_dropdown" id="shelter">
-                            <option value="cordoba">Cordoba</option>
-                            <option value="once">Once</option>
-                            <option value="parana">Paraná</option>
-                            <option value="rosario">Rosario</option>
-                            <option value="san_isidro">San Isidro</option>
-                            <option value="santa_fe">Santa Fé</option>
-                        </select>
-                    </td>
-                </tr>
+                    <label>
+                        <input type="checkbox" name="dog_size" id="dog_size_small" value="dog_size_small">
+                        Chico
+                    </label>
+                </div>
 
-                <tr >
-                    <td></td>
-                    <td id="submit_find_my_dog">
-                        <input type="submit" value="Buscar mi perrito" id="submit_form">
-                    </td>
-                    <td></td>
-                </tr>
-            </table>            
-        </form>
-    </section>
+                <div class="find_my_dog_form_age">
+                    <h4>Que edad de perrito preferís?</h4>
 
-    <footer>
-        <div>
-            <a href="find_my_dog.html" class="footer_left">Encontrar mi perro</a>
-            <a href="blog.html" class="footer_left">Blog</a>
-            <a href="our_dogs.html" class="footer_left">Mira nuestros perritos</a>
-        </div>
-    
-        <a href="contact_us.html", id="contact_us">Contactanos</a>
-    </footer>
+                    <br>
+                    
+                    <label>
+                        <input type="checkbox" name="dog_age" id="dog_age_puppy" value="dog_age_puppy">
+                        Cachorro
+                    </label>
+            
+                    <label>
+                        <input type="checkbox" name="dog_age" id="dog_age_young" value="dog_age_young">
+                        Joven
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="dog_age" id="dog_age_old" value="dog_age_old">
+                        Viejito
+                    </label>
+                </div>
+
+                <div class="find_my_dog_form_gender">
+                    <h4 for="dog_gender">Buscas algún sexo en particular?</h4>
+
+                    <br>
+
+                    
+                    <label>
+                        <input type="radio" name="dog_gender" id="dog_gender_male" value="dog_gender_male">
+                        Machito
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="dog_gender" id="dog_gender_female" value="dog_gender_female">
+                        Hembrita
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="dog_gender" id="dog_gender_any" value="dog_gender_any">
+                        Cualquiera
+                    </label>
+                </div>
+
+                <div class="find_my_dog_form_color">
+                    <h4 for="dog_color">Tenes algún color preferido?</h4>
+
+                    <br>
+
+                    <label>
+                        <input type="checkbox" name="dog_color" id="dog_color_black" value="dog_color_black">
+                        Negrito
+                    </label>
+                    
+                    
+                    <label>
+                        <input type="checkbox" name="dog_color" id="dog_color_white" value="dog_color_white">
+                        Blanquito
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="dog_color" id="dog_color_brown" value="dog_color_brown">
+                        Marroncito
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="dog_color" id="dog_color_spotted" value="dog_color_spotted">
+                        Alguno con mancha
+                    </label>
+                </div>
+
+                <div class="find_my_dog_form_hair">
+                    <h4 for="dog_hair">Que tipo de pelaje buscas?</h4>
+
+                    <br>
+                    
+                    <label>
+                        <input type="checkbox" name="dog_hair" id="dog_hair_short" value="dog_hair_short">
+                        Pelo corto
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" name="dog_hair" id="dog_hair_long" value="dog_hair_long">
+                        Pelo largo
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="dog_hair" id="dog_hair_medium" value="dog_hair_medium">
+                        Intermedio
+                    </label>
+                </div>
+
+                <div class="find_my_dog_form_shelter">
+                    <h4 for="shelter">Que refugio es el más cercano a tu casa?</h4>
+
+                    <br>
+
+                    <select name="shelter_dropdown" id="shelter">
+                        <option value="cordoba">Cordoba</option>
+                        <option value="once">Once</option>
+                        <option value="parana">Paraná</option>
+                        <option value="rosario">Rosario</option>
+                        <option value="san_isidro">San Isidro</option>
+                        <option value="santa_fe">Santa Fé</option>
+                    </select>
+                </div>
+
+                <div class="submit_find_my_dog">
+                    <input type="submit" value="Buscar mi perrito" class="submit_form">
+                </div>
+            </form>
+        </section>
+    </main>
+
 </body>
 
 </html>
