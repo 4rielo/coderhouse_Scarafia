@@ -116,15 +116,26 @@ h2 {
 .dogs_grid {
     text-align: center;
     padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     align-items: center;
-    grid-template-areas: 
-    "dog1 dog2"
-    "dog3 dog4"
-    "dog5 dog4"
-    "dog5 dog6";
+}
+
+@media (min-width: 768px) {
+    .dogs_grid {
+        text-align: center;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        gap: 10px;
+        align-items: center;
+        grid-template-areas: 
+        "dog1 dog2"
+        "dog3 dog4"
+        "dog5 dog4"
+        "dog5 dog6";
+    }
 }
 
 .dog_cell {
