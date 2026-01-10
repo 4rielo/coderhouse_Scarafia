@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 #div_line {
     background-color: $colorBorder;
@@ -12,9 +13,8 @@
 }
 
 .video_section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    @include flexBox(row, wrap, flex-start, center);
+
     padding: 20px;
 
     .video_content {
@@ -32,9 +32,8 @@
 }
 
 .blog_entry {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexBox(row, nowrap, center, center);
+
     padding: 40px;
 
     &_description {

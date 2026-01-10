@@ -1,4 +1,14 @@
 @use 'variables' as *;
+@use 'mixins' as *;
+
+$findMyDogAreas: (
+    size: dog_size,
+    age: dog_age,
+    gender: dog_gender,
+    color: dog_color,
+    hair: dog_hair,
+    shelter: closest_shelter
+);
 
 .find_my_dog_form {
     display: grid;
@@ -47,40 +57,16 @@
     }
 }
 
-.find_my_dog_form_size {
-    grid-area: dog_size;
-    display: flex;
-    flex-direction: column;
+%findMyDogColumn {
+    @include flexBox(column);
+    @include card;
 }
 
-.find_my_dog_form_age {
-    grid-area: dog_age;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_gender {
-    grid-area: dog_gender;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_color {
-    grid-area: dog_color;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_hair {
-    grid-area: dog_hair;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_shelter {
-    grid-area: closest_shelter;
-    display: flex;
-    flex-direction: column;
+@each $name, $area in $findMyDogAreas {
+    .find_my_dog_form_#{$name} {
+        @extend %findMyDogColumn;
+        grid-area: $area;
+    }
 }
 
 .submit_find_my_dog {

@@ -50,9 +50,10 @@ header {
 
 .nav {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 @media (min-width: 1024px) {
   .nav {
@@ -86,7 +87,9 @@ header {
 
 .video_section {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
   padding: 20px;
 }
@@ -105,8 +108,10 @@ header {
 
 .blog_entry {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
   padding: 40px;
 }
 .blog_entry_description {
@@ -117,12 +122,14 @@ header {
 }
 
 .dogs_grid {
-  text-align: center;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .dogs_grid {
@@ -201,40 +208,40 @@ header {
   font-weight: 500;
 }
 
-.find_my_dog_form_size {
-  grid-area: dog_size;
+.find_my_dog_form_shelter, .find_my_dog_form_hair, .find_my_dog_form_color, .find_my_dog_form_gender, .find_my_dog_form_age, .find_my_dog_form_size {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+
+.find_my_dog_form_size {
+  grid-area: dog_size;
 }
 
 .find_my_dog_form_age {
   grid-area: dog_age;
-  display: flex;
-  flex-direction: column;
 }
 
 .find_my_dog_form_gender {
   grid-area: dog_gender;
-  display: flex;
-  flex-direction: column;
 }
 
 .find_my_dog_form_color {
   grid-area: dog_color;
-  display: flex;
-  flex-direction: column;
 }
 
 .find_my_dog_form_hair {
   grid-area: dog_hair;
-  display: flex;
-  flex-direction: column;
 }
 
 .find_my_dog_form_shelter {
   grid-area: closest_shelter;
-  display: flex;
-  flex-direction: column;
 }
 
 .submit_find_my_dog {
