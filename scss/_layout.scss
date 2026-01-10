@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+#div_line {
+    background-color: $colorBorder;
+    height: 3px;
+    margin-inline: 20px;
+}
+
+#banner {
+    max-width: 100%;
+    height: auto;
+}
+
+.video_section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+
+    .video_content {
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        flex-wrap: nowrap;
+        gap: 20px;
+
+        .video_content {
+            width: 50%;
+        }
+    }
+}
+
+.blog_entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+    &_description {
+        padding: 10px;
+    }
+
+    .blog_image {
+        max-width: 40%;
+    }
+}

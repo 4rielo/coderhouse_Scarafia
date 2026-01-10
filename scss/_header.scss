@@ -1,0 +1,34 @@
+@use 'variables' as *;
+
+header {
+    background-color: $colorPrimary;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+        gap: 50px;
+    }
+
+    &_main {
+        font-size: xx-large;
+        font-family: $fontTitle;
+    }
+
+    &_menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &_item {
+        font-size: large;
+    }
+}
