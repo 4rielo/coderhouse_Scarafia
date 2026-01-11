@@ -1,0 +1,32 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+header {
+    background-color: $colorPrimary;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+    @include flexBox(row, wrap, center, center);
+
+    @media (min-width: 1024px) {
+        gap: 50px;
+    }
+
+    &_main {
+        font-size: xx-large;
+        font-family: $fontTitle;
+    }
+
+    &_menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &_item {
+        font-size: large;
+    }
+}

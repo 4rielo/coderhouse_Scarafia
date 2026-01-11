@@ -1,0 +1,33 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.dogs_grid {
+    @include flexBox(column, nowrap, flex-start, center, 10px);
+    text-align: center;
+    padding: 20px;
+    
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas:
+            "dog1 dog2"
+            "dog3 dog4"
+            "dog5 dog4"
+            "dog5 dog6";
+    }
+}
+
+.dog_cell {
+    @include card;
+}
+
+.dog_image {
+    max-width: 100%;
+    height: auto;
+}
+
+@for $i from 1 through 6 {
+    .dog#{$i} {
+        grid-area: dog#{$i};
+    }
+}
