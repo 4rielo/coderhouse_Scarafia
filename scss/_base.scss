@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+body {
+    height: 100%;
+    font-family: $fontBody;
+    background-color: $colorBg;
+    color: $colorTextMain;
+}
+
+h2 {
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+    font-family: $fontTitle;
+}
+
+h3 {
+    font-size: larger;
+    font-family: $fontTitle;
+}
+
+a.no_underline {
+    text-decoration: none;
+    color: $colorTextMain;
+}
+
+.submit_form {
+    padding: 10px 20px;
+    background-color: $colorAccent;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

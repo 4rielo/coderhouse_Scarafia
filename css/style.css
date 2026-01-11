@@ -1,319 +1,297 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+*,
 *::before,
-*::after { box-sizing: border-box; }
-
-/* Header and navigation config */
-header {
-    background-color: #00d4ff;
-    text-align: center;
-    padding: 20px;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.no_underline {
-    text-decoration: none;    
-    color: black;
-}
-
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (min-width: 1024px){
-    .nav{
-        gap: 50px;
-    }
-}
-
-.nav_main {
-    font-size: xx-large;
-}
-
-.nav_menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav_item {
-    font-size: large;
-}
-
-
-/* BODY */
 body {
-    height: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: #FAFAF9;
+  color: #264653;
 }
 
 h2 {
-    padding: 30px;
-    text-align: center;
-    font-size: 40px;
-}
-
-#div_line {
-    background-color: black;
-    height: 3px;
-    margin-inline: 20px;
-}
-
-#banner {
-    max-width: 100%;
-    height: auto;
-}
-
-.video_section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
-}
-
-.video_content {
-    width: 100%;
-    height: auto;
-}
-
-@media (min-width: 768px){
-    .video_section {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .video_content {
-        width: 50%;
-        height: auto;
-    }
-}
-
-.blog_entry {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    padding: 40px;
-}
-
-.blog_entry_description {
-    padding: 10px;
-}
-
-.blog_image {
-    max-width: 40%;
-}
-
-.dogs_grid {
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .dogs_grid {
-        text-align: center;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        gap: 10px;
-        align-items: center;
-        grid-template-areas: 
-        "dog1 dog2"
-        "dog3 dog4"
-        "dog5 dog4"
-        "dog5 dog6";
-    }
-}
-
-.dog_cell {
-    border-color: black;
-    border-style: groove;
-    padding: 20px;
-}
-
-.dog_image {
-    max-width: 100%;
+  padding: 30px;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
 }
 
 h3 {
-    font-size: larger;
+  font-size: larger;
+  font-family: "Poppins", sans-serif;
 }
 
-.dog1 {
-    grid-area: dog1;
-}
-.dog2 {
-    grid-area: dog2;
-}
-.dog3 {
-    grid-area: dog3;
-}
-.dog4 {
-    grid-area: dog4;
-}
-.dog5 {
-    grid-area: dog5;
-}
-.dog6 {
-    grid-area: dog6;
-}
-
-/* Find my dog form */ 
-.find_my_dog_form {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: auto;
-
-    grid-template-areas: 
-    "dog_size"
-    "dog_age"
-    "dog_gender"
-    "dog_color"
-    "dog_hair"
-    "closest_shelter"
-    "submit_find_my_dog";
-        
-    justify-items: start;
-    justify-content: center;
-    align-items: top;
-
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-}
-
-.find_my_dog_form_size {
-    grid-area: dog_size;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_age {
-    grid-area: dog_age;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_gender {
-    grid-area: dog_gender;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_color {
-    grid-area: dog_color;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_hair {
-    grid-area: dog_hair;
-    display: flex;
-    flex-direction: column;
-}
-
-.find_my_dog_form_shelter {
-    grid-area: closest_shelter;
-    display: flex;
-    flex-direction: column;
-}
-
-.submit_find_my_dog {
-    grid-area: submit_find_my_dog;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-@media (min-width: 768px) {
-    .find_my_dog_form {
-        grid-template-columns: 2;
-        grid-template-rows: 4;
-        grid-template-areas: 
-        "dog_size dog_age"
-        "dog_gender dog_color"
-        "dog_hair closest_shelter"
-        "submit_find_my_dog submit_find_my_dog";
-    }
-}
-
-@media (min-width: 1024px) {
-    .find_my_dog_form {
-        grid-template-columns: 3;
-        grid-template-rows: 3;
-        grid-template-areas: 
-        "dog_size dog_age dog_gender"
-        "dog_color dog_hair closest_shelter"
-        ". submit_find_my_dog .";
-    }
-}
-
-/* Contact Us form */ 
-.contact_form {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-areas: 
-    "contact_us_email_label contact_us_email_field"
-    "contact_us_tell_us_label contact_us_tell_us_field"
-    "contact_us_submit_btn contact_us_submit_btn";
-    row-gap: 50px;
-    column-gap: 10px;
-    align-items: top;
-}
-
-@media (min-width: 768px) {
-    .contact_form {
-        grid-template-columns: repeat(4, 25%);
-        grid-template-areas: 
-        "contact_us_email_label contact_us_email_field . ."
-        "contact_us_tell_us_label contact_us_tell_us_field . ."
-        "contact_us_submit_btn contact_us_submit_btn . .";
-    }
-}
-
-.contact_us_email_label {
-    grid-area: contact_us_email_label;
-}
-
-.contact_us_email_field {
-    grid-area: contact_us_email_field;
-    min-height: 2rem;
-    padding-inline: 1rem;
-    max-lines: 1;
-}
-
-.contact_us_tell_us_label {
-    grid-area: contact_us_tell_us_label;
-}
-
-.contact_us_tell_us_field {
-    grid-area: contact_us_tell_us_field;
-    min-height: 10rem;
-    padding: 1rem;
-}
-
-.contact_us_submit_btn { 
-    grid-area: contact_us_submit_btn;    
-    width: 100px;
-    justify-self: end;
+a.no_underline {
+  text-decoration: none;
+  color: #264653;
 }
 
 .submit_form {
-    padding: 10px;
-    background-color: #009ff3;
-    color: white;
+  padding: 10px 20px;
+  background-color: #E76F51;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
+.submit_form:hover {
+  opacity: 0.9;
+}
+
+header {
+  background-color: #F4A261;
+  text-align: center;
+  padding: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .nav {
+    gap: 50px;
+  }
+}
+.nav_main {
+  font-size: xx-large;
+  font-family: "Poppins", sans-serif;
+}
+.nav_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.nav_item {
+  font-size: large;
+}
+
+#div_line {
+  background-color: #E0E0E0;
+  height: 3px;
+  margin-inline: 20px;
+}
+
+#banner {
+  max-width: 100%;
+  height: auto;
+}
+
+.video_section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+.video_section .video_content {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .video_section {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  .video_section .video_content {
+    width: 50%;
+  }
+}
+
+.blog_entry {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.blog_entry_description {
+  padding: 10px;
+}
+.blog_entry .blog_image {
+  max-width: 40%;
+}
+
+.dogs_grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .dogs_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "dog1 dog2" "dog3 dog4" "dog5 dog4" "dog5 dog6";
+  }
+}
+
+.dog_cell {
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+
+.dog_image {
+  max-width: 100%;
+  height: auto;
+}
+
+.dog1 {
+  grid-area: dog1;
+}
+
+.dog2 {
+  grid-area: dog2;
+}
+
+.dog3 {
+  grid-area: dog3;
+}
+
+.dog4 {
+  grid-area: dog4;
+}
+
+.dog5 {
+  grid-area: dog5;
+}
+
+.dog6 {
+  grid-area: dog6;
+}
+
+.find_my_dog_form {
+  display: grid;
+  gap: 40px;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+  grid-template-areas: "dog_size" "dog_age" "dog_gender" "dog_color" "dog_hair" "closest_shelter" "submit_find_my_dog";
+}
+@media (min-width: 768px) {
+  .find_my_dog_form {
+    grid-template-columns: 2;
+    grid-template-rows: 4;
+    grid-template-areas: "dog_size dog_age" "dog_gender dog_color" "dog_hair closest_shelter" "submit_find_my_dog submit_find_my_dog";
+  }
+}
+@media (min-width: 1024px) {
+  .find_my_dog_form {
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+    grid-template-areas: "dog_size dog_age dog_gender" "dog_color dog_hair closest_shelter" ". submit_find_my_dog .";
+  }
+}
+.find_my_dog_form {
+  justify-items: start;
+  justify-content: center;
+  align-items: top;
+}
+.find_my_dog_form label {
+  font-weight: 500;
+}
+
+.find_my_dog_form_shelter, .find_my_dog_form_hair, .find_my_dog_form_color, .find_my_dog_form_gender, .find_my_dog_form_age, .find_my_dog_form_size {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+
+.find_my_dog_form_size {
+  grid-area: dog_size;
+}
+
+.find_my_dog_form_age {
+  grid-area: dog_age;
+}
+
+.find_my_dog_form_gender {
+  grid-area: dog_gender;
+}
+
+.find_my_dog_form_color {
+  grid-area: dog_color;
+}
+
+.find_my_dog_form_hair {
+  grid-area: dog_hair;
+}
+
+.find_my_dog_form_shelter {
+  grid-area: closest_shelter;
+}
+
+.submit_find_my_dog {
+  grid-area: submit_find_my_dog;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.contact_form {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-areas: "contact_us_email_label contact_us_email_field" "contact_us_tell_us_label contact_us_tell_us_field" "contact_us_submit_btn contact_us_submit_btn";
+  row-gap: 50px;
+  column-gap: 10px;
+  align-items: top;
+}
+@media (min-width: 768px) {
+  .contact_form {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: "contact_us_email_label contact_us_email_field . ." "contact_us_tell_us_label contact_us_tell_us_field . ." "contact_us_submit_btn contact_us_submit_btn . .";
+  }
+}
+
+.contact_us_email_label {
+  grid-area: contact_us_email_label;
+}
+
+.contact_us_email_field {
+  grid-area: contact_us_email_field;
+  min-height: 2rem;
+  padding-inline: 1rem;
+  max-lines: 1;
+}
+
+.contact_us_tell_us_label {
+  grid-area: contact_us_tell_us_label;
+}
+
+.contact_us_tell_us_field {
+  grid-area: contact_us_tell_us_field;
+  min-height: 10rem;
+  padding: 1rem;
+}
+
+.contact_us_submit_btn {
+  grid-area: contact_us_submit_btn;
+  width: 100px;
+  justify-self: end;
+}
+
+/*# sourceMappingURL=style.css.map */

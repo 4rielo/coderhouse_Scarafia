@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+#div_line {
+    background-color: $colorBorder;
+    height: 3px;
+    margin-inline: 20px;
+}
+
+#banner {
+    max-width: 100%;
+    height: auto;
+}
+
+.video_section {
+    @include flexBox(row, wrap, flex-start, center);
+
+    padding: 20px;
+
+    .video_content {
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        flex-wrap: nowrap;
+        gap: 20px;
+
+        .video_content {
+            width: 50%;
+        }
+    }
+}
+
+.blog_entry {
+    @include flexBox(row, nowrap, center, center);
+
+    padding: 40px;
+
+    &_description {
+        padding: 10px;
+    }
+
+    .blog_image {
+        max-width: 40%;
+    }
+}
