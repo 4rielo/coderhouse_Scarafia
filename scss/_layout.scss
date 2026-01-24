@@ -32,15 +32,22 @@
 }
 
 .blog_entry {
-    @include flexBox(row, nowrap, center, center);
+    @include flexBox(column, nowrap, center, center);
+
+    @media (min-width: 768px) {
+        @include flexBox(row, nowrap, center, center);
+    }
 
     padding: 40px;
 
     &_description {
         padding: 10px;
     }
+}
 
-    .blog_image {
+.blog_image {
+    max-width: 100%;
+    @media (min-width: 768px){
         max-width: 40%;
     }
 }

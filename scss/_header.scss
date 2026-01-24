@@ -10,6 +10,8 @@ header {
 .nav {
     @include flexBox(row, wrap, center, center);
 
+    gap: 20px;
+    
     @media (min-width: 1024px) {
         gap: 50px;
     }
@@ -28,5 +30,11 @@ header {
 
     &_item {
         font-size: large;
+        text-decoration: none;
+    }
+
+    &_item:hover {
+        color: $colorSecondary;
+        text-decoration: underline;
     }
 }
