@@ -279,12 +279,18 @@ header {
   margin: 20px;
   display: grid;
   grid-template-columns: 2;
-  grid-template-areas: "contact_us_email_label contact_us_email_field" "contact_us_tell_us_label contact_us_tell_us_field" "contact_us_submit_btn contact_us_submit_btn";
+  grid-template-areas: "contact_us_name_label contact_us_name_field" "contact_us_email_label contact_us_email_field" "contact_us_tell_us_label contact_us_tell_us_field" "contact_us_submit_btn contact_us_submit_btn";
   row-gap: 50px;
   column-gap: 10px;
   align-items: top;
 }
 @media (min-width: 768px) {
+  .contact_us_form {
+    grid-template-columns: repeat(3, 33%);
+    grid-template-areas: "contact_us_name_label contact_us_name_field ." "contact_us_email_label contact_us_email_field ." "contact_us_tell_us_label contact_us_tell_us_field ." "contact_us_submit_btn contact_us_submit_btn .";
+  }
+}
+@media (min-width: 1024px) {
   .contact_us_form {
     grid-template-columns: repeat(4, 25%);
     grid-template-areas: "contact_us_name_label contact_us_name_field . ." "contact_us_email_label contact_us_email_field . ." "contact_us_tell_us_label contact_us_tell_us_field . ." "contact_us_submit_btn contact_us_submit_btn . .";
