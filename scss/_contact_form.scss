@@ -1,49 +1,113 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
-.contact_form {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-areas: 
-        "contact_us_email_label contact_us_email_field"
-        "contact_us_tell_us_label contact_us_tell_us_field"
-        "contact_us_submit_btn contact_us_submit_btn";
-    row-gap: 50px;
-    column-gap: 10px;
-    align-items: top;
-
-    @media (min-width: 768px) {
-        grid-template-columns: repeat(4, 25%);
+.contact_us {
+    &_form {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: 2;
         grid-template-areas: 
-        "contact_us_email_label contact_us_email_field . ."
-        "contact_us_tell_us_label contact_us_tell_us_field . ."
-        "contact_us_submit_btn contact_us_submit_btn . .";
+            "contact_us_email_label contact_us_email_field"
+            "contact_us_tell_us_label contact_us_tell_us_field"
+            "contact_us_submit_btn contact_us_submit_btn";
+        row-gap: 50px;
+        column-gap: 10px;
+        align-items: top;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(4, 25%);
+            grid-template-areas: 
+            "contact_us_name_label contact_us_name_field . ."
+            "contact_us_email_label contact_us_email_field . ."
+            "contact_us_tell_us_label contact_us_tell_us_field . ."
+            "contact_us_submit_btn contact_us_submit_btn . .";
+        }
     }
+
+    &_name_label {
+        grid-area: contact_us_name_label;
+    }
+
+    &_name_field {
+        grid-area: contact_us_name_field;
+        min-height: 2rem;
+        padding-inline: 1rem;
+        max-lines: 1;
+
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+
+    &_email_label {
+        grid-area: contact_us_email_label;
+    }
+
+    &_email_field {
+        grid-area: contact_us_email_field;
+        min-height: 2rem;
+        padding-inline: 1rem;
+        max-lines: 1;
+
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+
+    &_tell_us_label {
+        grid-area: contact_us_tell_us_label;
+    }
+
+    &_tell_us_field {
+        grid-area: contact_us_tell_us_field;
+        min-height: 10rem;
+        padding: 1rem;
+
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+
+    &_submit_btn { 
+        grid-area: contact_us_submit_btn;    
+        width: 100px;
+        justify-self: end;
+    }
+    
 }
 
-.contact_us_email_label {
-    grid-area: contact_us_email_label;
+.shelterVisits {
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.contact_us_email_field {
-    grid-area: contact_us_email_field;
-    min-height: 2rem;
-    padding-inline: 1rem;
-    max-lines: 1;
+.shelterGrid {
+  @include flexBox(column, nowrap, center, stretch, 20px);
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.contact_us_tell_us_label {
-    grid-area: contact_us_tell_us_label;
-}
+.shelterCard {
+    @include card();
 
-.contact_us_tell_us_field {
-    grid-area: contact_us_tell_us_field;
-    min-height: 10rem;
-    padding: 1rem;
-}
+    @include flexBox(column, nowrap, center, center, 10px);
 
-.contact_us_submit_btn { 
-    grid-area: contact_us_submit_btn;    
-    width: 100px;
-    justify-self: end;
+    h3 {
+        margin-bottom: 5px;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }

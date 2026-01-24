@@ -14,7 +14,7 @@
     align-items: $align;
 
     @if $gap != null {
-    gap: $gap;
+        gap: $gap;
     }
 }
 
